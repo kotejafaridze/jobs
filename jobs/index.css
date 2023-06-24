@@ -1,0 +1,79 @@
+body {
+  width: 100%;
+  height: auto;
+}
+
+/* banner */
+.banner-container {
+  background-color: var(--greyColor);
+}
+.banner-container img {
+  width: 100%;
+}
+
+/* featured companies */
+.featured {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--greyColor);
+}
+.featured-image {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.2rem;
+}
+.section-title {
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5rem;
+  font-size: 36px;
+}
+.featured-wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  padding: 2% 5%;
+}
+.featured-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--whiteColor);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.featured-card:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.feautured-button {
+  border: 1px solid var(--primaryColor);
+  background-color: transparent;
+  margin-top: 0.5rem;
+  padding: 3px 10px;
+  cursor: pointer;
+  color: var(--primaryColor);
+}
+.feautured-button:hover {
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+}
+
+/*stylem for small screens*/
+
+@media (max-width: 768px) {
+  .featured-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .featured-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .featured-button {
+    padding: 6px 12px;
+  }
+}

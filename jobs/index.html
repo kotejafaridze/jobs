@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobs Search App</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="global.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--navbar-->
+    <nav class="navbar">
+      <h1 class="navbar-logo"><a href="#">Find jobs</a></h1>
+      <div class="navbar-menu">
+        <a href="#jobList">Jobs</a>
+        <a href="#companies">Company</a>
+        <a href="./about/index.html">About</a>
+      </div>
+    </nav>
+
+    <!-- banner -->
+    <div class="banner-container">
+      <img src="./images/banner.jpg" alt="banner" />
+    </div>
+
+    <!-- featured  companies-->
+    <section class="featured" id="companies">
+      <h1 class="section-title">Top Companies</h1>
+      <p>
+        Find Your Dream Job: Connect with the Top Employers on Our Platform!
+      </p>
+      <div class="featured-wrapper">
+        <div class="featured-card">
+          <img src="./images/youtube.png" alt="" class="featured-image" />
+          <p>YouTube</p>
+          <a href="./all-jobs/index.html"
+            ><button class="feautured-button">View 1 jobs</button></a
+          >
+        </div>
+        <div class="featured-card">
+          <img src="./images/tiktok.png" alt="" class="featured-image" />
+          <p>TikTok</p>
+          <a href="./all-jobs/index.html"
+            ><button class="feautured-button">View 3 jobs</button></a
+          >
+        </div>
+        <div class="featured-card">
+          <img src="./images/tesla.png" alt="" class="featured-image" />
+          <p>Tesla</p>
+          <a href="./all-jobs/index.html"
+            ><button class="feautured-button">View 1 jobs</button></a
+          >
+        </div>
+        <div class="featured-card">
+          <img src="./images/google.png" alt="" class="featured-image" />
+          <p>Google</p>
+          <a href="./all-jobs/index.html"
+            ><button class="feautured-button">View 5 jobs</button></a
+          >
+        </div>
+        <div class="featured-card">
+          <img src="./images/fb.png" alt="" class="featured-image" />
+          <p>Facebook</p>
+          <a href="./all-jobs/index.html"
+            ><button class="feautured-button">View 11 jobs</button></a
+          >
+        </div>
+        <div class="featured-card">
+          <img src="./images/apple.png" alt="" class="featured-image" />
+          <p>Apple</p>
+          <a href="./all-jobs/index.html"
+            ><button class="feautured-button">View 4 jobs</button></a
+          >
+        </div>
+        <div class="featured-card">
+          <img src="./images/amazon.png" alt="" class="featured-image" />
+          <p>Amazon</p>
+          <a href="./all-jobs/index.html"
+            ><button class="feautured-button">View 31 jobs</button></a
+          >
+        </div>
+        <div class="featured-card">
+          <img src="./images/ebay.svg" alt="" class="featured-image" />
+          <p>Ebay</p>
+          <a href="./all-jobs/index.html"
+            ><button class="feautured-button">View 21 jobs</button></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Job Listing -->
+    <h1 class="company-title">Find Your Dream Job</h1>
+    <div id="jobList"></div>
+    <a href="./all-jobs/index.html"
+      ><button class="job-more">See All</button></a
+    >
+
+    <script src="global.js"></script>
+    <script>
+      fetch("https://my-json-server.typicode.com/saba1111111/jobss/jobs")
+        .then((data) => data.json())
+        .then((datas) => {
+          renderJobList(
+            datas.slice(0, 3),
+            "jobList",
+            "./job-details/index.html"
+          );
+        })
+        .catch((err) => console.log(err));
+    </script>
+  </body>
+</html>
