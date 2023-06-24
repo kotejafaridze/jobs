@@ -1,6 +1,6 @@
 # My HTML/CSS Project
 
-Welcome to my HTML/CSS project! This project showcases my skills in building static web pages using HTML and CSS. It's a simple yet elegant project that demonstrates my understanding of responsive design, modern UI/UX principles, and clean code practices.
+გამარჯობა. ეს გახლავთ ჩემი ფინალური გამოცდის პროექტი.
 
 ## Project Overview
 
